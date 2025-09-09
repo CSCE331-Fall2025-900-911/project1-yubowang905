@@ -1,5 +1,126 @@
-.black-div{
-    background-color: black;
-    width: 100%;
-    height: 100px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+  padding: 0;
+}
+
+/* ====== Header & Navigation ====== */
+
+.style1_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(135deg, #1f1f1f, #2d2d2d);
+  padding: 30px 60px;
+  border-bottom: 2px solid #333;
+}
+
+.style1_header h1,
+h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.style1_header nav {
+  display: flex;
+  gap: 25px;
+}
+
+.style1_header nav a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #bbbbbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.style1_header nav a:hover {
+  color: #00bcd4;
+}
+
+/* ====== Headings ====== */
+h2 {
+  margin: 20px 0 10px;
+  color: #00bcd4;
+  font-size: 2rem;
+  border-left: 4px solid #00bcd4;
+  padding-left: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: large;
+}
+
+.introduction{
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 40px;
+}
+
+.intro_image{
+  flex-shrink: 0;
+  width: 300px; 
+  height: 300px;
+}
+
+.intro_image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.intro-text {
+  flex:1;
+}
+
+/* ====== Fieldsets ====== */
+fieldset {
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin: 20px 0;
+  padding: 15px;
+  background: #1e1e1e;
+}
+
+legend {
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+/* ====== Images ====== */
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+/* ====== Resume Embed ====== */
+iframe {
+  border: none;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* ====== Lists ====== */
+ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+ul li {
+  margin: 8px 0;
+}
+
