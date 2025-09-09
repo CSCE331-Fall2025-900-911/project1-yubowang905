@@ -71,8 +71,8 @@ p {
 
 .intro_image{
   flex-shrink: 0;
-  width: 300px; 
-  height: 300px;
+  width: 400px; 
+  height: 400px;
 }
 
 .intro_image img {
@@ -84,6 +84,36 @@ p {
 
 .intro-text {
   flex:1;
+}
+
+.hobbies{
+  margin: 40px;
+}
+
+.hobbies h2 {
+  margin-bottom: 20px;
+}
+
+.hobby {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.hobby img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.hobby p {
+  margin: 0;
 }
 
 /* ====== Fieldsets ====== */
@@ -98,6 +128,36 @@ fieldset {
 legend {
   font-weight: bold;
   color: #00bcd4;
+}
+
+.contact{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-icons {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contact-icons img {
+  width: 60px;
+  height: 60px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contact-icons img:hover {
+  transform: scale(1.2);
+  filter: brightness(0) invert(0.5) sepia(1) hue-rotate(180deg) saturate(3);
 }
 
 /* ====== Images ====== */
