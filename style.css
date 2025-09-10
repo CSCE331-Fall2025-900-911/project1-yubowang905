@@ -12,8 +12,6 @@ body {
   padding: 0;
 }
 
-/* ====== Header & Navigation ====== */
-
 .style1_header{
   display: flex;
   justify-content: space-between;
@@ -41,14 +39,14 @@ h1 {
   letter-spacing: 1px;
   color: #bbbbbb;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .style1_header nav a:hover {
   color: #00bcd4;
+  transform: scale(1.25);
 }
 
-/* ====== Headings ====== */
 h2 {
   margin: 20px 0 10px;
   color: #00bcd4;
@@ -103,6 +101,11 @@ p {
   border-radius: 10px;
   margin-bottom: 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.hobby:hover{
+  transform: scale(1.05);
 }
 
 .hobby img {
@@ -116,7 +119,6 @@ p {
   margin: 0;
 }
 
-/* ====== Fieldsets ====== */
 fieldset {
   border: 1px solid #333;
   border-radius: 8px;
@@ -160,27 +162,100 @@ legend {
   filter: brightness(0) invert(0.5) sepia(1) hue-rotate(180deg) saturate(3);
 }
 
-/* ====== Images ====== */
-img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin: 10px 0;
+.qualification {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 32px;
+  margin: 40px;
 }
 
-/* ====== Resume Embed ====== */
-iframe {
+.resume h2 {
+  margin-top: 0;
+}
+
+.resume a{
+  color: #00bcd4;
+}
+
+
+.resume-frame {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+.resume-frame iframe {
+  width: 100%;
+  height: 1200px;
   border: none;
   border-radius: 8px;
-  margin-top: 15px;
 }
 
-/* ====== Lists ====== */
-ul {
-  margin: 15px 0;
-  padding-left: 20px;
+.languages h2 {
+  margin-top: 0;
+}
+.lang-icon {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
+  align-items: center;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+  transition: transform 0.3s;
 }
 
-ul li {
-  margin: 8px 0;
+.lang-icon:hover{
+  transform: scale(1.05);
 }
+
+.lang-icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.frameworks {
+  margin-top: 30px;
+}
+
+.frameworks h2 {
+  margin-bottom: 16px;
+}
+
+.tool {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+  transition: transform 0.3s;
+}
+
+.tool:hover{
+  transform: scale(1.05);
+}
+
+.tool p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.technical-interest {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 40px;
+}
+
+.interests-text {
+  flex: 2;
+}
+
 
