@@ -1,23 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genai</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI in Software Engineering</title>
 </head>
-<body>
-    <h1>This page is yet to be completed by AI</h1>
-    <h2>This is for Lab Attendence !!!</h2>
+<body style="
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+  color:#E6E6EB;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, #2a2a50 0%, rgba(20,20,38,0) 60%),
+    radial-gradient(900px 500px at -20% 10%, #1f3f4f 0%, rgba(20,20,38,0) 60%),
+    radial-gradient(1600px 800px at 50% 120%, #35224b 0%, rgba(20,20,38,0) 70%),
+    linear-gradient(180deg, #0E0F17, #141426);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  overflow-x:hidden;
+">
 
-    <div>
-      <nav>
-        <a href="index.html">Home</a> |
-        <a href="portfolio.html">Portfolio</a> |
-        <a href="qualifications.html">Qualifications</a> |
-        <a href="service.html">Services</a> |
-        <a href="genai.html">GenAI</a>
+  <!-- Subtle animated background using inline SVG (no CSS/JS needed) -->
+  <div aria-hidden="true" style="position:fixed; inset:0; z-index:0; opacity:.35; pointer-events:none;">
+    <svg viewBox="0 0 1200 800" width="100%" height="100%" preserveAspectRatio="none" style="display:block;">
+      <defs>
+        <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#6cf" stop-opacity="0.7">
+            <animate attributeName="stop-color" values="#6cf; #a4f; #6cf" dur="14s" repeatCount="indefinite"/>
+          </stop>
+          <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#6cf" stop-opacity="0.6"/>
+          <stop offset="50%" stop-color="#9b7bff" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#6cf" stop-opacity="0.6"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Floating glow orbs -->
+      <circle cx="200" cy="300" r="220" fill="url(#glow)">
+        <animate attributeName="cx" values="180; 260; 180" dur="22s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="320; 260; 320" dur="18s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1000" cy="150" r="180" fill="url(#glow)">
+        <animate attributeName="cx" values="980; 1040; 980" dur="20s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="140; 210; 140" dur="16s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Soft sine-like wave line -->
+      <path d="M0,600 C200,560 380,660 600,620 C820,580 1000,660 1200,620"
+            fill="none" stroke="url(#waveGrad)" stroke-width="2" opacity="0.5">
+        <animate attributeName="d"
+                 dur="12s" repeatCount="indefinite"
+                 values="
+                 M0,600 C200,560 380,660 600,620 C820,580 1000,660 1200,620;
+                 M0,610 C200,650 380,590 600,640 C820,690 1000,580 1200,640;
+                 M0,600 C200,560 380,660 600,620 C820,580 1000,660 1200,620" />
+      </path>
+    </svg>
+  </div>
+
+  <!-- Header / Nav -->
+  <header style="
+    position:sticky; top:0; z-index:5;
+    backdrop-filter: blur(8px);
+    background: linear-gradient(180deg, rgba(10,10,18,0.7), rgba(10,10,18,0.2));
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  ">
+    <div style="
+      max-width:1200px; margin:0 auto; padding:18px 20px;
+      display:flex; align-items:center; justify-content:space-between;
+    ">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <!-- Simple logo glyph -->
+        <div style="
+          width:32px; height:32px; border-radius:10px;
+          background: linear-gradient(135deg,#6cf,#9b7bff);
+          box-shadow: 0 0 20px rgba(108, 204, 255, .4), inset 0 0 10px rgba(255,255,255,.25);
+        "></div>
+        <span style="letter-spacing:.3px; font-weight:600; font-size:15px; color:#DDE6FF;">Aether Labs</span>
+      </div>
+
+      <nav style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="index.html" style="
+          text-decoration:none; color:#D9DBFF; font-size:14px; padding:10px 14px; border-radius:10px;
+          background: rgba(255,255,255,0.04);
+          border:1px solid rgba(255,255,255,0.08);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+        ">Home</a>
+        <a href="portfolio.html" style="
+          text-decoration:none; color:#D9DBFF; font-size:14px; padding:10px 14px; border-radius:10px;
+          background: rgba(255,255,255,0.04);
+          border:1px solid rgba(255,255,255,0.08);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+        ">Portfolio</a>
+        <a href="qualifications.html" style="
+          text-decoration:none; color:#D9DBFF; font-size:14px; padding:10px 14px; border-radius:10px;
+          background: rgba(255,255,255,0.04);
+          border:1px solid rgba(255,255,255,0.08);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+        ">Qualifications</a>
+        <a href="service.html" style="
+          text-decoration:none; color:#0D1117; font-size:14px; padding:10px 14px; border-radius:10px;
+          background: linear-gradient(135deg,#6cf,#9b7bff);
+          border:1px solid rgba(255,255,255,0.14);
+          box-shadow: 0 6px 30px rgba(108, 204, 255, .25), inset 0 1px 0 rgba(255,255,255,.35);
+        ">Services</a>
       </nav>
     </div>
+  </header>
 
+  <!-- Main -->
+  <main style="flex:1; position:relative; z-index:1;">
+    <!-- Hero -->
+    <section style="
+      max-width:1200px; margin:0 auto; padding:56px 20px 24px 20px;
+      display:grid; grid-template-columns: 1.2fr 1fr; gap:28px; align-items:center;
+    ">
+      <div>
+        <div style="
+          display:inline-flex; align-items:center; gap:10px;
+          padding:8px 12px; border-radius:999px; font-size:12px; letter-spacing:.3px; color:#cfe8ff;
+          background: rgba(108, 204, 255, .08);
+          border:1px solid rgba(108, 204, 255, .25);
+          box-shadow: inset 0 0 12px rgba(108, 204, 255, .15);
+        ">
+          <span style="width:8px; height:8px; border-radius:999px; background:#6cf; box-shadow:0 0 10px #6cf;"></span>
+          <strong style="font-weight:600;">AI for Software Engineering</strong>
+        </div>
+
+        <h1 style="
+          margin:18px 0 12px 0; line-height:1.12; font-size:48px; font-weight:800;
+          color:#F3F5FF; letter-spacing:.3px; text-shadow: 0 6px 30px rgba(155,123,255,.15);
+        ">
+          Ship smarter, faster, <span style="background:linear-gradient(135deg,#8bd4ff,#b79bff); -webkit-background-clip:text; background-clip:text; color:transparent;">with AI</span>.
+        </h1>
+
+        <p style="margin:0; max-width:680px; color:#BFC6D9; font-size:16px; line-height:1.65;">
+          From code generation to automated testing and incident prediction,
+          AI is transforming the software engineering lifecycle. This page distills
+          practical patterns, tools, and workflows to enhance productivity and reliability—without sacrificing craftsmanship.
+        </p>
+
+        <!-- CTA row -->
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:22px;">
+          <a href="service.html" style="
+            text-decoration:none; font-weight:700; letter-spacing:.2px; color:#0D1117;
+            background: linear-gradient(135deg,#6cf,#9b7bff);
+            padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.22);
+            box-shadow: 0 10px 40px rgba(108, 204, 255, .30), inset 0 1px 0 rgba(255,255,255,.5);
+          ">Explore Services</a>
+          <a href="portfolio.html" style="
+            text-decoration:none; color:#DDE6FF; padding:12px 16px; border-radius:12px;
+            background: rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.10);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+          ">See Portfolio</a>
+        </div>
+      </div>
+
+      <!-- Hero visual (SVG circuit + AI glyph) -->
+      <div style="
+        position:relative; width:100%; aspect-ratio:1.1/1; border-radius:22px; overflow:hidden;
+        background: radial-gradient(120% 120% at 0% 0%, rgba(108,204,255,.15), rgba(0,0,0,0) 60%),
+                    radial-gradient(120% 120% at 100% 100%, rgba(155,123,255,.18), rgba(0,0,0,0) 60%),
+                    rgba(255,255,255,.03);
+        border:1px solid rgba(255,255,255,.08);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 20px 60px rgba(0,0,0,.35);
+      ">
+        <svg viewBox="0 0 600 600" width="100%" height="100%" style="display:block;">
+          <!-- Glow core -->
+          <circle cx="300" cy="300" r="120" fill="url(#coreGradient)"></circle>
+          <defs>
+            <radialGradient id="coreGradient">
+              <stop offset="0%" stop-color="#cfe9ff"/>
+              <stop offset="60%" stop-color="#8bd4ff"/>
+              <stop offset="100%" stop-color="#9b7bff"/>
+            </radialGradient>
+          </defs>
+
+          <!-- Circuit lines -->
+          <g opacity="0.75">
+            <path d="M60 160 Q300 160 300 300" fill="none" stroke="#74c9ff" stroke-width="2" stroke-opacity="0.7"/>
+            <circle cx="60" cy="160" r="5" fill="#74c9ff"/>
+            <path d="M540 160 Q300 160 300 300" fill="none" stroke="#b599ff" stroke-width="2" stroke-opacity="0.7"/>
+            <circle cx="540" cy="160" r="5" fill="#b599ff"/>
+
+            <path d="M60 440 Q300 440 300 300" fill="none" stroke="#b599ff" stroke-width="2" stroke-opacity="0.7"/>
+            <circle cx="60" cy="440" r="5" fill="#b599ff"/>
+            <path d="M540 440 Q300 440 300 300" fill="none" stroke="#74c9ff" stroke-width="2" stroke-opacity="0.7"/>
+            <circle cx="540" cy="440" r="5" fill="#74c9ff"/>
+          </g>
+
+          <!-- Pulsing ring -->
+          <circle cx="300" cy="300" r="175" fill="none" stroke="#7ecfff" stroke-opacity="0.35" stroke-width="1.5">
+            <animate attributeName="r" values="165; 185; 165" dur="10s" repeatCount="indefinite"/>
+            <animate attributeName="stroke-opacity" values="0.15; 0.45; 0.15" dur="10s" repeatCount="indefinite"/>
+          </circle>
+
+          <!-- AI letters -->
+          <g transform="translate(240, 285)">
+            <rect x="0" y="0" width="50" height="8" rx="4" fill="#111421"
+                  style="filter: drop-shadow(0 10px 30px rgba(108,204,255,.35)); stroke:#6ccfff; stroke-width:.8;"/>
+            <rect x="0" y="18" width="50" height="8" rx="4" fill="#111421"
+                  style="filter: drop-shadow(0 10px 30px rgba(155,123,255,.35)); stroke:#b79bff; stroke-width:.8;"/>
+            <rect x="0" y="36" width="50" height="8" rx="4" fill="#111421"
+                  style="filter: drop-shadow(0 10px 30px rgba(108,204,255,.35)); stroke:#6ccfff; stroke-width:.8;"/>
+
+            <rect x="70" y="0" width="8" height="44" rx="4" fill="#111421"
+                  style="filter: drop-shadow(0 10px 30px rgba(155,123,255,.35)); stroke:#b79bff; stroke-width:.8;"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Benefits / Pillars -->
+    <section style="max-width:1200px; margin:0 auto; padding:10px 20px 48px 20px;">
+      <div style="display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:16px;">
+        <!-- Card 1 -->
+        <a href="index.html" style="
+          text-decoration:none; color:#DDE6FF; border-radius:18px; padding:20px;
+          background: rgba(255,255,255,.04);
+          border:1px solid rgba(255,255,255,.08);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 20px 60px rgba(0,0,0,.25);
+          display:flex; gap:14px; align-items:flex-start; min-height:120px;
+        ">
+          <div style="
+            width:42px; height:42px; border-radius:12px;
+            background: linear-gradient(135deg,#6cf,#9b7bff);
+            box-shadow: 0 8px 28px rgba(108,204,255,.35);
+            flex:0 0 auto;
+          "></div>
+          <div>
+            <h3 style="margin:0 0 6px 0; font-size:18px; color:#F0F4FF;">AI-Assisted Coding</h3>
+            <p style="margin:0; color:#C6CEE0; font-size:14px; line-height:1.6;">
+              Use LLM copilots for scaffolding, refactoring, and idiomatic patterns. Keep humans in the loop for reviews and design decisions.
+            </p>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="portfolio.html" style="
+          text-decoration:none; color:#DDE6FF; border-radius:18px; padding:20px;
+          background: rgba(255,255,255,.04);
+          border:1px solid rgba(255,255,255,.08);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 20px 60px rgba(0,0,0,.25);
+          display:flex; gap:14px; align-items:flex-start; min-height:120px;
+        ">
+          <div style="
+            width:42px; height:42px; border-radius:12px;
+            background: linear-gradient(135deg,#9b7bff,#6cf);
+            box-shadow: 0 8px 28px rgba(155,123,255,.35);
+            flex:0 0 auto;
+          "></div>
+          <div>
+            <h3 style="margin:0 0 6px 0; font-size:18px; color:#F0F4FF;">Quality & Testing</h3>
+            <p style="margin:0; color:#C6CEE0; font-size:14px; line-height:1.6;">
+              Generate unit tests from specs, synthesize edge-cases, and auto-triage failures. Blend property-based tests with AI-driven fuzzing.
+            </p>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="qualifications.html" style="
+          text-decoration:none; color:#DDE6FF; border-radius:18px; padding:20px;
+          background: rgba(255,255,255,.04);
+          border:1px solid rgba(255,255,255,.08);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 20px 60px rgba(0,0,0,.25);
+          display:flex; gap:14px; align-items:flex-start; min-height:120px;
+        ">
+          <div style="
+            width:42px; height:42px; border-radius:12px;
+            background: linear-gradient(135deg,#6cf,#9b7bff);
+            box-shadow: 0 8px 28px rgba(108,204,255,.35);
+            flex:0 0 auto;
+          "></div>
+          <div>
+            <h3 style="margin:0 0 6px 0; font-size:18px; color:#F0F4FF;">Observability</h3>
+            <p style="margin:0; color:#C6CEE0; font-size:14px; line-height:1.6;">
+              Summarize logs and traces, detect anomalies, and propose fixes that align with SLAs and error budgets.
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Second row -->
+      <div style="display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:16px; margin-top:16px;">
+        <!-- Card 4 -->
+        <a href="service.html" style="
+          text-decoration:none; color:#DDE6FF; border-radius:18px; padding:20px;
+          background: rgba(255,255,255,.04);
+          border:1px solid rgba(255,255,255,.08);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 20px 60px rgba(0,0,0,.25);
+          display:flex; gap:14px; align-items:flex-start; min-height:120px;
+        ">
+          <div style="
+            width:42px; height:42px; border-radius:12px;
+            background: linear-gradient(135deg,#9b7bff,#6cf);
+            box-shadow: 0 8px 28px rgba(155,123,255,.35);
+            flex:0 0 auto;
+          "></div>
+          <div>
+            <h3 style="margin:0 0 6px 0; font-size:18px; color:#F0F4FF;">Secure by Design</h3>
+            <p style="margin:0; color:#C6CEE0; font-size:14px; line-height:1.6;">
+              Integrate SAST/DAST hints, license checks, and secrets scanning into AI workflows for safer deployments.
+            </p>
+          </div>
+        </a>
+
+        <!-- Card 5 -->
+        <a href="portfolio.html" style="
+          text-decoration:none; color:#DDE6FF; border-radius:18px; padding:20px;
+          background: rgba(255,255,255,.04);
+          border:1px solid rgba(255,255,255,.08);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 20px 60px rgba(0,0,0,.25);
+          display:flex; gap:14px; align-items:flex-start; min-height:120px;
+        ">
+          <div style="
+            width:42px; height:42px; border-radius:12px;
+            background: linear-gradient(135deg,#6cf,#9b7bff);
+            box-shadow: 0 8px 28px rgba(108,204,255,.35);
+            flex:0 0 auto;
+          "></div>
+          <div>
+            <h3 style="margin:0 0 6px 0; font-size:18px; color:#F0F4FF;">Delivery Acceleration</h3>
+            <p style="margin:0; color:#C6CEE0; font-size:14px; line-height:1.6;">
+              Sprint planning with generative summaries, complexity forecasts, and automatic PR descriptions & changelogs.
+            </p>
+          </div>
+        </a>
+
+        <!-- Card 6 -->
+        <a href="qualifications.html" style="
+          text-decoration:none; color:#DDE6FF; border-radius:18px; padding:20px;
+          background: rgba(255,255,255,.04);
+          border:1px solid rgba(255,255,255,.08);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 20px 60px rgba(0,0,0,.25);
+          display:flex; gap:14px; align-items:flex-start; min-height:120px;
+        ">
+          <div style="
+            width:42px; height:42px; border-radius:12px;
+            background: linear-gradient(135deg,#9b7bff,#6cf);
+            box-shadow: 0 8px 28px rgba(155,123,255,.35);
+            flex:0 0 auto;
+          "></div>
+          <div>
+            <h3 style="margin:0 0 6px 0; font-size:18px; color:#F0F4FF;">Ethics & Governance</h3>
+            <p style="margin:0; color:#C6CEE0; font-size:14px; line-height:1.6;">
+              Define data boundaries, model provenance, and review trails. Build trust with clear human oversight.
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Split panel: brief content + quick links -->
+    <section style="max-width:1200px; margin:0 auto; padding:6px 20px 64px 20px; display:grid; grid-template-columns: 1.2fr .8fr; gap:22px;">
+      <div style="
+        border-radius:18px; padding:22px;
+        background: rgba(255,255,255,.035);
+        border:1px solid rgba(255,255,255,.08);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 18px 48px rgba(0,0,0,.28);
+      ">
+        <h2 style="margin:0 0 8px 0; font-size:22px; color:#F0F4FF;">Why AI matters now</h2>
+        <p style="margin:0; color:#C6CEE0; font-size:15px; line-height:1.75;">
+          Modern teams juggle microservices, cloud resources, compliance, and relentless releases.
+          AI augments this complexity: translating plain language into code, predicting regressions,
+          and surfacing insights buried in telemetry. The result is higher developer happiness and
+          more resilient systems—when paired with sensible controls and review culture.
+        </p>
+      </div>
+
+      <div style="
+        border-radius:18px; padding:22px;
+        background: rgba(255,255,255,.035);
+        border:1px solid rgba(255,255,255,.08);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 18px 48px rgba(0,0,0,.28);
+        display:flex; flex-direction:column; gap:12px;
+      ">
+        <h3 style="margin:0; font-size:16px; color:#EAF0FF;">Quick links</h3>
+        <a href="index.html" style="text-decoration:none; color:#CFE2FF; font-size:14px;">→ Home (Overview)</a>
+        <a href="portfolio.html" style="text-decoration:none; color:#CFE2FF; font-size:14px;">→ Portfolio (Case Studies)</a>
+        <a href="qualifications.html" style="text-decoration:none; color:#CFE2FF; font-size:14px;">→ Qualifications (Skills & Tools)</a>
+        <a href="service.html" style="text-decoration:none; color:#CFE2FF; font-size:14px;">→ Services (Engagement Models)</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer style="
+    z-index:1; border-top:1px solid rgba(255,255,255,0.06);
+    background: linear-gradient(180deg, rgba(10,10,18,0.15), rgba(10,10,18,0.55));
+  ">
+    <div style="max-width:1200px; margin:0 auto; padding:22px 20px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px;">
+      <p style="margin:0; color:#A7B0C7; font-size:13px;">© 2025 Aether Labs — AI for Software Engineering</p>
+      <div style="display:flex; gap:12px;">
+        <a href="index.html" style="text-decoration:none; color:#BFD7FF; font-size:13px;">Home</a>
+        <a href="portfolio.html" style="text-decoration:none; color:#BFD7FF; font-size:13px;">Portfolio</a>
+        <a href="qualifications.html" style="text-decoration:none; color:#BFD7FF; font-size:13px;">Qualifications</a>
+        <a href="service.html" style="text-decoration:none; color:#BFD7FF; font-size:13px;">Services</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
+
+    <section style="max-width:1200px; margin:0 auto; padding:20px;">
+      <div style="
+        border-radius:16px; padding:20px;
+        background: rgba(255,255,255,.03);
+        border:1px solid rgba(255,255,255,.08);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 12px 36px rgba(0,0,0,.3);
+        color:#C6CEE0; font-size:14px; line-height:1.6;
+        white-space:pre-wrap; font-family:Consolas, monospace;
+      ">
+        <strong style="color:#E6E9FF;">Prompt for generating this website:</strong><br><br>
+        the design of this website page must be dark themed, elegant, with proper fashion or even animation. 
+        This website need to link to four other html files, index.html, portfolio.html, qualifications.html, 
+        and service.html. The content on this page should be about using AI in software engineering industry. 
+        You can only use html and inline css to create this website, no external css or javacript. 
+        Use rich visual elements and make sure the design is modern and appealing.
+      </div>
+    </section>
