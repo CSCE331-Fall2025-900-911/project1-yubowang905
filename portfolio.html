@@ -1,39 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <div class="style1_header">
-  <h1>Technical Portfolio</h1>
-      <nav>
-        <a href="index.html">Home</a> |
-        <a href="portfolio.html">Portfolio</a> |
-        <a href="qualifications.html">Qualifications</a> |
-        <a href="service.html">Services</a> |
-        <a href="genai.html">GenAI</a>
-      </nav>
+    <h1>Technical Portfolio</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="portfolio.html">Portfolio</a> |
+      <a href="qualifications.html">Qualifications</a> |
+      <a href="service.html">Services</a> |
+      <a href="genai.html">GenAI</a>
+    </nav>
   </div>
 
-  <h2>My Projects: </h2>
-  <p>Here are some of my past projects I’ve worked on that reflect my skills, creativity, and problem-solving approach.</p>
-  <fieldset>
-    <legend>Project one: Training Yolo Object Identification AI model</legend>
-    <p><strong>Description: </strong>Trained a small object identification AI model using Yolo v8</p>
-    <p><strong>Challenges: </strong></p>
-  </fieldset>
-  <fieldset>
-    <legend>Project two: Internal Management Tool for China Telecom</legend>
-    <p><strong>Description: </strong>Helped developing the newest internal management and equipments monitoring tool for Chine Telecom</p>
-    <p><strong>Challenges: </strong></p>
-  </fieldset>
-  <fieldset>
-    <legend>Project three (TBD)</legend>
-    <p><strong>Description: </strong></p>
-    <p><strong>Challenges: </strong></p>
-  </fieldset>
+  <section class="portfolio-intro">
+    <p>
+      Welcome to my portfolio. Here, you’ll find a selection of projects that showcase my journey as a computer 
+      science student and developer. Each project reflects challenges I’ve tackled, skills I’ve strengthened, 
+      and lessons I’ve learned along the way. This page is both a record of what I’ve accomplished and 
+      a glimpse into the areas I’m excited to explore in the near future.
+    </p>
+  </section>
+
+  <main class="portfolio">
+    <section class="project-grid">
+
+      <article class="project-card">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=1200&auto=format&fit=crop" alt="YOLO Object Identification cover"/>
+        </div>
+        <h3>YOLO Object Identification (v8)</h3>
+        <p class="project-description">
+          Trained a small object-detection model on a custom dataset; focused on clean labels, targeted augmentation,
+          and careful validation to reach stable performance.
+        </p>
+        <h4>Challenges</h4>
+        <ul class="project-list">
+          <li>Handling low-light/blurred examples without overfitting.</li>
+          <li>Finding an augmentation mix that helped small classes.</li>
+          <li>Choosing checkpoints/lr for a small dataset.</li>
+        </ul>
+        <h4>Insights</h4>
+        <ul class="project-list">
+          <li>Label consistency beats raw dataset size early on.</li>
+          <li>Targeted augmentations > blanket settings.</li>
+          <li>PR curves/confusion matrices guide real improvements.</li>
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1551281044-8e8b71ccb998?q=80&w=1200&auto=format&fit=crop" alt="Internal Management Tool cover"/>
+        </div>
+        <h3>Internal Management Tool — China Telecom</h3>
+        <p class="project-description">
+          Contributed to an internal dashboard for equipment monitoring and actions. Worked across UI and data plumbing
+          to present real-time status clearly.
+        </p>
+        <h4>Challenges</h4>
+        <ul class="project-list">
+          <li>Presenting dense telemetry without overwhelming users.</li>
+          <li>Normalizing streams from multiple data sources.</li>
+          <li>Keeping tables and charts responsive with lots of rows.</li>
+        </ul>
+        <h4>Insights</h4>
+        <ul class="project-list">
+          <li>Progressive disclosure (collapse/expand) reduces clutter.</li>
+          <li>Clear units and naming build operator trust.</li>
+          <li>Small UX improvements (sticky headers, quick filters) matter.</li>
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Planned project cover"/>
+        </div>
+        <h3>Project Three (TBD)</h3>
+        <p class="project-description">
+          Exploring a small prototype (game/robotics tool/security app). Aim: minimal, polished v1 with tight scope.
+        </p>
+        <h4>Challenges</h4>
+        <ul class="project-list">
+          <li>Prioritizing features for a fast first release.</li>
+          <li>Picking a stack that optimizes iteration speed.</li>
+        </ul>
+        <h4>Insights</h4>
+        <ul class="project-list">
+          <li>Define success metrics at the start.</li>
+          <li>Ship small, learn fast, iterate.</li>
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Future project cover"/>
+        </div>
+        <h3>Future Slot</h3>
+        <p class="project-description">
+          Reserved for an upcoming build. Once scoped, I’ll add a short summary and visuals.
+        </p>
+        <h4>Challenges</h4>
+        <ul class="project-list">
+          <li>Scoping to an achievable MVP.</li>
+        </ul>
+        <h4>Insights</h4>
+        <ul class="project-list">
+          <li>Keep goals specific and measurable.</li>
+        </ul>
+      </article>
+
+    </section>
+  </main>
 </body>
 </html>
