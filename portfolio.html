@@ -32,7 +32,7 @@
 
       <article class="project-card">
         <div class="project-image">
-          <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=1200&auto=format&fit=crop" alt="YOLO Object Identification cover"/>
+          <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=1200&auto=format&fit=crop" alt="YOLO Object Identification"/>
         </div>
         <h3>YOLO Object Identification (v8)</h3>
         <p class="project-description">
@@ -55,7 +55,7 @@
 
       <article class="project-card">
         <div class="project-image">
-          <img src="https://images.unsplash.com/photo-1551281044-8e8b71ccb998?q=80&w=1200&auto=format&fit=crop" alt="Internal Management Tool cover"/>
+          <img src="https://neilpatel.com/wp-content/uploads/2021/10/site24x7-Best-Website-Monitoring-Services-1200x675.png" alt="Internal Management"/>
         </div>
         <h3>Internal Management Tool — China Telecom</h3>
         <p class="project-description">
@@ -78,39 +78,49 @@
 
       <article class="project-card">
         <div class="project-image">
-          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Planned project cover"/>
+          <img src="https://www.researchgate.net/publication/345649969/figure/fig1/AS:956146043064320@1604974389340/The-Secure-Bank-System-Architecture.png" alt="Banking System"/>
         </div>
-        <h3>Project Three (TBD)</h3>
+        <h3>Multithreaded Bank System</h3>
         <p class="project-description">
-          Exploring a small prototype (game/robotics tool/security app). Aim: minimal, polished v1 with tight scope.
+          Developed a C++ program simulating a simple banking system where multiple users can simultaneously perform transactions. 
+          Implemented concurrency control using threads, mutexes, and condition 
+          variables to ensure data integrity while supporting parallel operations.
         </p>
         <h4>Challenges</h4>
         <ul class="project-list">
-          <li>Prioritizing features for a fast first release.</li>
-          <li>Picking a stack that optimizes iteration speed.</li>
+          <li>Designing thread-safe access to shared resources (account balances).</li>
+          <li>Avoiding race conditions when multiple users attempted simultaneous transactions.</li>
+          <li>Handling potential deadlocks when different operations required overlapping resources.</li>
         </ul>
         <h4>Insights</h4>
         <ul class="project-list">
-          <li>Define success metrics at the start.</li>
-          <li>Ship small, learn fast, iterate.</li>
+          <li>Learned the importance of synchronization primitives in real-world applications.</li>
+          <li>Understood how improper concurrency design can lead to subtle bugs like data corruption or deadlocks.</li>
+          <li>Gained appreciation for testing under concurrent workloads to uncover issues not visible in single threaded scenarios.</li>
         </ul>
       </article>
 
       <article class="project-card">
         <div class="project-image">
-          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Future project cover"/>
+          <img src="https://i.ytimg.com/vi/faqea0RZSDc/maxresdefault.jpg" alt="Game Engine Prototype"/>
         </div>
-        <h3>Future Slot</h3>
+        <h3>On-going Project: 2D Game Engine Prototype</h3>
         <p class="project-description">
-          Reserved for an upcoming build. Once scoped, I’ll add a short summary and visuals.
+          Designing and implementing a simple 2D game engine in C++ from scratch, featuring a basic rendering system, input handling, 
+          and a small physics/collision module. By implementing a core loop, sprite rendering, and event handling, this project will 
+          serve as both a technical challenge and a stepping stone toward future game development projects.
         </p>
         <h4>Challenges</h4>
         <ul class="project-list">
-          <li>Scoping to an achievable MVP.</li>
+          <li>Implementing a stable game loop that handles rendering, input, and updates consistently.</li>
+          <li>Managing assets (sprites, sounds) efficiently in memory.</li>
+          <li>Balancing performance and readability in C++ for real-time applications.</li>
         </ul>
         <h4>Insights</h4>
         <ul class="project-list">
-          <li>Keep goals specific and measurable.</li>
+          <li>Gain practical experience in structuring game architecture (loop, update, render cycle).</li>
+          <li>Build a stronger foundation in graphics, physics, and C++ design patterns.</li>
+          <li>Understand the tradeoffs between building tools from scratch vs. using existing engines</li>
         </ul>
       </article>
 
