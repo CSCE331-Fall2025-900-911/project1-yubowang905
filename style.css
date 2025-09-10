@@ -258,4 +258,69 @@ legend {
   flex: 2;
 }
 
+.services {
+  display: flex;
+  justify-content: center;
+  padding: 32px 20px 20px;
+}
+.services p {
+  max-width: 900px;
+  text-align: center;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.services-grid {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 20px 0 40px;
+}
+
+.service-box {
+  display: block;
+  background: var(--card, #1e1e1e);
+  border: 1px solid var(--border, #333);
+  border-radius: 12px;
+  padding: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+  border-color: var(--accent, #00bcd4);
+}
+
+.service-box img {
+  float: left;
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 4px 16px 10px 0;
+  shape-outside: inset(0 round 10px);
+}
+
+.service-box::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.service-text h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.service-text p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #d2d2d2;
+}
 
