@@ -1,4 +1,140 @@
 body {
-    background-color: white;
-    color: black;
+  background: #fafafa;
+  color: #1a1a1a;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.65;
 }
+
+.style1_header {
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 28px 16px 18px;
+  text-align: center;
+}
+.style1_header h1 {
+  font-size: 1.9rem;
+  color: #222;
+  margin-bottom: 8px;
+}
+.style1_header nav {
+  display: inline-flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.style1_header nav a {
+  color: #555;
+  font-weight: 600;
+  padding: 4px 0;
+}
+.style1_header nav a:hover { 
+    color: #0a84ff; 
+}
+
+.introduction {
+  display: block;
+  background: #ffffff;
+  border: 1px solid #e9e9e9;
+  border-radius: 12px;
+  padding: 24px;
+}
+.intro_image {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 16px auto;
+}
+.intro_image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 6px solid #f3f3f3;
+}
+.intro-text {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+.intro-text h2 {
+  margin: 6px 0 10px;
+  font-size: 1.25rem;
+  color: #2b2b2b;
+}
+.intro-text p {
+  margin: 12px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.hobbies h2 {
+  width: 100%;
+  font-size: 1.15rem;
+  color: #2b2b2b;
+  border-left: none;
+  padding-left: 0;
+  margin: 4px 0 14px;
+  grid-column: 1 / -1;
+}
+
+.hobbies .hobby {
+  display: block;
+  background: #ffffff;
+  border: 1px solid #e9e9e9;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.hobbies .hobby img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.hobbies .hobby p {
+  margin: 0;
+  color: #333;
+  font-size: 0.98rem;
+}
+
+.hobbies {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+fieldset {
+  background: #ffffff;
+  border: 1px solid #e9e9e9;
+  border-radius: 12px;
+  padding: 16px;
+}
+legend { 
+    color: #2b2b2b; 
+    font-weight: 700;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  align-items: center;
+}
+.contact-info p {
+    margin: 4px 0; 
+    color: #333;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 14px;
+}
+.contact-icons img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+
+

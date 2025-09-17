@@ -12,7 +12,6 @@ function toggleStyleSheet(){
 
 
 window.addEventListener("DOMContentLoaded", () => {
-  // Apply saved theme on load (fixes = vs === bug)
   let saved = localStorage.getItem("savecss");
   let link = document.getElementById("mainStyleSheet");
   if (saved === "0") {
