@@ -403,3 +403,9 @@ legend {
 .project-list li {
   margin: 4px 0;
 }
+.project-card a{
+  color: #eaeaea;
+}
+.project-card a:hover{
+  color: #00bcd4;
+}
